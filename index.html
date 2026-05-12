@@ -162,6 +162,16 @@
     margin-top: 4px;
   }
 
+
+  /* ---- Link styling for TOC entries ---- */
+  a.chapter, a.standalone {
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  a.chapter { display: flex; }
+  a.standalone { display: block; }
+
   /* ---- Chapter ---- */
   .chapter {
     display: flex;
@@ -281,11 +291,11 @@
   <div class="toc-title">目 &nbsp; 录</div>
 
   <!-- 序 -->
-  <div class="standalone">
+  <a class="standalone" href="01_序_那栋楼还没有盖起来.html">
     <span class="label">序</span>
     <span class="sep"></span>
     <span class="title">那栋楼还没有盖起来</span>
-  </div>
+  </a>
 
   <div class="divider"></div>
 
@@ -297,9 +307,9 @@
         <span class="part-name">从图纸到工地</span>
       </div>
     </div>
-    <div class="chapter"><span class="chapter-num">一</span><span class="chapter-title">美丽的烂尾</span></div>
-    <div class="chapter"><span class="chapter-num">二</span><span class="chapter-title">两种建筑师</span></div>
-    <div class="chapter"><span class="chapter-num">三</span><span class="chapter-title">工程师</span></div>
+    <a class="chapter" href="02_一_美丽的烂尾.html"><span class="chapter-num">一</span><span class="chapter-title">美丽的烂尾</span></a>
+    <a class="chapter" href="03_二_两种建筑师.html"><span class="chapter-num">二</span><span class="chapter-title">两种建筑师</span></a>
+    <a class="chapter" href="04_三_工程师.html"><span class="chapter-num">三</span><span class="chapter-title">工程师</span></a>
   </div>
 
   <!-- 第一部 -->
@@ -311,14 +321,14 @@
       </div>
       <div class="part-sub">战略拆解 — 从愿景到三年到一年到季度到月</div>
     </div>
-    <div class="chapter"><span class="chapter-num">四</span><span class="chapter-title">你的愿景能拆成几块</span></div>
-    <div class="chapter"><span class="chapter-num">五</span><span class="chapter-title">三年太远，明天太近</span></div>
-    <div class="chapter"><span class="chapter-num">六</span><span class="chapter-title">从山顶倒推到山脚</span></div>
-    <div class="chapter"><span class="chapter-num">七</span><span class="chapter-title">关键路径</span></div>
-    <div class="chapter"><span class="chapter-num">八</span><span class="chapter-title">优先级不是排序，是放弃</span></div>
-    <div class="chapter"><span class="chapter-num">九</span><span class="chapter-title">里程碑</span></div>
-    <div class="chapter"><span class="chapter-num">十</span><span class="chapter-title">活计划，死计划</span></div>
-    <div class="chapter"><span class="chapter-num">十一</span><span class="chapter-title">第一次对着施工图点头</span></div>
+    <a class="chapter" href="05_四_你的愿景能拆成几块.html"><span class="chapter-num">四</span><span class="chapter-title">你的愿景能拆成几块</span></a>
+    <a class="chapter" href="06_五_三年太远明天太近.html"><span class="chapter-num">五</span><span class="chapter-title">三年太远，明天太近</span></a>
+    <a class="chapter" href="07_六_从山顶倒推到山脚.html"><span class="chapter-num">六</span><span class="chapter-title">从山顶倒推到山脚</span></a>
+    <a class="chapter" href="08_七_关键路径.html"><span class="chapter-num">七</span><span class="chapter-title">关键路径</span></a>
+    <a class="chapter" href="09_八_优先级不是排序是放弃.html"><span class="chapter-num">八</span><span class="chapter-title">优先级不是排序，是放弃</span></a>
+    <a class="chapter" href="10_九_里程碑.html"><span class="chapter-num">九</span><span class="chapter-title">里程碑</span></a>
+    <a class="chapter" href="11_十_活计划死计划.html"><span class="chapter-num">十</span><span class="chapter-title">活计划，死计划</span></a>
+    <a class="chapter" href="12_十一_第一次对着施工图点头.html"><span class="chapter-num">十一</span><span class="chapter-title">第一次对着施工图点头</span></a>
   </div>
 
   <!-- 第二部 -->
@@ -330,14 +340,14 @@
       </div>
       <div class="part-sub">组织设计 — 谁扛梁，谁承重，怎么分工，怎么配合</div>
     </div>
-    <div class="chapter"><span class="chapter-num">十二</span><span class="chapter-title">谁是梁，谁是柱</span></div>
-    <div class="chapter"><span class="chapter-num">十三</span><span class="chapter-title">你的组织能承受多少重量</span></div>
-    <div class="chapter"><span class="chapter-num">十四</span><span class="chapter-title">一根梁扛不了整栋楼</span></div>
-    <div class="chapter"><span class="chapter-num">十五</span><span class="chapter-title">不是缺人，是位置放错了</span></div>
-    <div class="chapter"><span class="chapter-num">十六</span><span class="chapter-title">架构跟着战略走，不是反过来</span></div>
-    <div class="chapter"><span class="chapter-num">十七</span><span class="chapter-title">拆掉那面不承重的墙</span></div>
-    <div class="chapter"><span class="chapter-num">十八</span><span class="chapter-title">最小作战单元</span></div>
-    <div class="chapter"><span class="chapter-num">十九</span><span class="chapter-title">结构对了，力自己会传导</span></div>
+    <a class="chapter" href="13_十二_谁是梁谁是柱.html"><span class="chapter-num">十二</span><span class="chapter-title">谁是梁，谁是柱</span></a>
+    <a class="chapter" href="14_十三_你的组织能承受多少重量.html"><span class="chapter-num">十三</span><span class="chapter-title">你的组织能承受多少重量</span></a>
+    <a class="chapter" href="15_十四_一根梁扛不了整栋楼.html"><span class="chapter-num">十四</span><span class="chapter-title">一根梁扛不了整栋楼</span></a>
+    <a class="chapter" href="16_十五_不是缺人是位置放错了.html"><span class="chapter-num">十五</span><span class="chapter-title">不是缺人，是位置放错了</span></a>
+    <a class="chapter" href="17_十六_架构跟着战略走.html"><span class="chapter-num">十六</span><span class="chapter-title">架构跟着战略走，不是反过来</span></a>
+    <a class="chapter" href="18_十七_拆掉那面不承重的墙.html"><span class="chapter-num">十七</span><span class="chapter-title">拆掉那面不承重的墙</span></a>
+    <a class="chapter" href="19_十八_最小作战单元.html"><span class="chapter-num">十八</span><span class="chapter-title">最小作战单元</span></a>
+    <a class="chapter" href="20_十九_结构对了力自己会传导.html"><span class="chapter-num">十九</span><span class="chapter-title">结构对了，力自己会传导</span></a>
   </div>
 
   <!-- 第三部 -->
@@ -349,14 +359,14 @@
       </div>
       <div class="part-sub">业务流程与现金流 — 钱怎么流，活怎么流，信息怎么流</div>
     </div>
-    <div class="chapter"><span class="chapter-num">二十</span><span class="chapter-title">看不见的才是命</span></div>
-    <div class="chapter"><span class="chapter-num">二十一</span><span class="chapter-title">你的钱是怎么流的</span></div>
-    <div class="chapter"><span class="chapter-num">二十二</span><span class="chapter-title">你的活是怎么流的</span></div>
-    <div class="chapter"><span class="chapter-num">二十三</span><span class="chapter-title">堵了</span></div>
-    <div class="chapter"><span class="chapter-num">二十四</span><span class="chapter-title">漏了</span></div>
-    <div class="chapter"><span class="chapter-num">二十五</span><span class="chapter-title">信息流：最容易被忽视的第三根管</span></div>
-    <div class="chapter"><span class="chapter-num">二十六</span><span class="chapter-title">现金流是氧气</span></div>
-    <div class="chapter"><span class="chapter-num">二十七</span><span class="chapter-title">通了</span></div>
+    <a class="chapter" href="21_二十_看不见的才是命.html"><span class="chapter-num">二十</span><span class="chapter-title">看不见的才是命</span></a>
+    <a class="chapter" href="22_二十一_你的钱是怎么流的.html"><span class="chapter-num">二十一</span><span class="chapter-title">你的钱是怎么流的</span></a>
+    <a class="chapter" href="23_二十二_你的活是怎么流的.html"><span class="chapter-num">二十二</span><span class="chapter-title">你的活是怎么流的</span></a>
+    <a class="chapter" href="24_二十三_堵了.html"><span class="chapter-num">二十三</span><span class="chapter-title">堵了</span></a>
+    <a class="chapter" href="25_二十四_漏了.html"><span class="chapter-num">二十四</span><span class="chapter-title">漏了</span></a>
+    <a class="chapter" href="26_二十五_信息流第三根管.html"><span class="chapter-num">二十五</span><span class="chapter-title">信息流：最容易被忽视的第三根管</span></a>
+    <a class="chapter" href="27_二十六_现金流是氧气.html"><span class="chapter-num">二十六</span><span class="chapter-title">现金流是氧气</span></a>
+    <a class="chapter" href="28_二十七_通了.html"><span class="chapter-num">二十七</span><span class="chapter-title">通了</span></a>
   </div>
 
   <!-- 第四部 -->
@@ -368,14 +378,14 @@
       </div>
       <div class="part-sub">产品与客户交付 — 每一个触点长什么样，做到什么标准</div>
     </div>
-    <div class="chapter"><span class="chapter-num">二十八</span><span class="chapter-title">客户不住在效果图里</span></div>
-    <div class="chapter"><span class="chapter-num">二十九</span><span class="chapter-title">最小可交付</span></div>
-    <div class="chapter"><span class="chapter-num">三十</span><span class="chapter-title">每一面墙的手感</span></div>
-    <div class="chapter"><span class="chapter-num">三十一</span><span class="chapter-title">标准化与个性化</span></div>
-    <div class="chapter"><span class="chapter-num">三十二</span><span class="chapter-title">交付即兑现</span></div>
-    <div class="chapter"><span class="chapter-num">三十三</span><span class="chapter-title">客户验收的那一刻</span></div>
-    <div class="chapter"><span class="chapter-num">三十四</span><span class="chapter-title">返工</span></div>
-    <div class="chapter"><span class="chapter-num">三十五</span><span class="chapter-title">住进去之后</span></div>
+    <a class="chapter" href="29_二十八_客户不住在效果图里.html"><span class="chapter-num">二十八</span><span class="chapter-title">客户不住在效果图里</span></a>
+    <a class="chapter" href="30_二十九_最小可交付.html"><span class="chapter-num">二十九</span><span class="chapter-title">最小可交付</span></a>
+    <a class="chapter" href="31_三十_每一面墙的手感.html"><span class="chapter-num">三十</span><span class="chapter-title">每一面墙的手感</span></a>
+    <a class="chapter" href="32_三十一_标准化与个性化.html"><span class="chapter-num">三十一</span><span class="chapter-title">标准化与个性化</span></a>
+    <a class="chapter" href="33_三十二_交付即兑现.html"><span class="chapter-num">三十二</span><span class="chapter-title">交付即兑现</span></a>
+    <a class="chapter" href="34_三十三_客户验收的那一刻.html"><span class="chapter-num">三十三</span><span class="chapter-title">客户验收的那一刻</span></a>
+    <a class="chapter" href="35_三十四_返工.html"><span class="chapter-num">三十四</span><span class="chapter-title">返工</span></a>
+    <a class="chapter" href="36_三十五_住进去之后.html"><span class="chapter-num">三十五</span><span class="chapter-title">住进去之后</span></a>
   </div>
 
   <!-- 第五部 -->
@@ -387,31 +397,31 @@
       </div>
       <div class="part-sub">风险与纪律 — 什么时候踩刹车，什么是底线，怎么活下来</div>
     </div>
-    <div class="chapter"><span class="chapter-num">三十六</span><span class="chapter-title">你的楼会着火吗</span></div>
-    <div class="chapter"><span class="chapter-num">三十七</span><span class="chapter-title">最不想发生的三件事</span></div>
-    <div class="chapter"><span class="chapter-num">三十八</span><span class="chapter-title">信号灯</span></div>
-    <div class="chapter"><span class="chapter-num">三十九</span><span class="chapter-title">刹车比油门重要</span></div>
-    <div class="chapter"><span class="chapter-num">四十</span><span class="chapter-title">底线不是用来讨论的</span></div>
-    <div class="chapter"><span class="chapter-num">四十一</span><span class="chapter-title">预案</span></div>
-    <div class="chapter"><span class="chapter-num">四十二</span><span class="chapter-title">活下来的纪律</span></div>
-    <div class="chapter"><span class="chapter-num">四十三</span><span class="chapter-title">最坏的情况发生之后</span></div>
+    <a class="chapter" href="37_三十六_你的楼会着火吗.html"><span class="chapter-num">三十六</span><span class="chapter-title">你的楼会着火吗</span></a>
+    <a class="chapter" href="38_三十七_最不想发生的三件事.html"><span class="chapter-num">三十七</span><span class="chapter-title">最不想发生的三件事</span></a>
+    <a class="chapter" href="39_三十八_信号灯.html"><span class="chapter-num">三十八</span><span class="chapter-title">信号灯</span></a>
+    <a class="chapter" href="40_三十九_刹车比油门重要.html"><span class="chapter-num">三十九</span><span class="chapter-title">刹车比油门重要</span></a>
+    <a class="chapter" href="41_四十_底线不是用来讨论的.html"><span class="chapter-num">四十</span><span class="chapter-title">底线不是用来讨论的</span></a>
+    <a class="chapter" href="42_四十一_预案.html"><span class="chapter-num">四十一</span><span class="chapter-title">预案</span></a>
+    <a class="chapter" href="43_四十二_活下来的纪律.html"><span class="chapter-num">四十二</span><span class="chapter-title">活下来的纪律</span></a>
+    <a class="chapter" href="44_四十三_最坏的情况发生之后.html"><span class="chapter-num">四十三</span><span class="chapter-title">最坏的情况发生之后</span></a>
   </div>
 
   <!-- 终章 -->
   <div class="final">
-    <div class="standalone">
+    <a class="standalone" href="45_终章_一栋真实的楼.html">
       <span class="label">终章</span>
       <span class="sep"></span>
       <span class="title">一栋真实的楼</span>
-    </div>
+    </a>
   </div>
 
   <!-- 后记 -->
-  <div class="standalone" style="margin-top: 24px;">
+  <a class="standalone" style="margin-top: 24px;" href="46_后记_三张图纸.html">
     <span class="label">后记</span>
     <span class="sep"></span>
     <span class="title">三张图纸</span>
-  </div>
+  </a>
 
   <!-- Back Matter -->
   <div class="back-matter">
