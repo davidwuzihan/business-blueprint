@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商业施工图 · 六 · 从山顶倒推到山脚</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+  :root{--ink:#1a1a1a;--paper:#f2f1ed;--steel:#6b6e73;--accent:#2c2c2c;--line:#d2d0cb;--dim:#c4c1ba;--blue:#4a5568;}
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--paper);color:var(--ink);font-family:'Noto Serif SC',serif;-webkit-font-smoothing:antialiased;min-height:100vh;}
+  a{text-decoration:none;color:inherit;}
+  .top-nav{max-width:720px;margin:0 auto;padding:32px 40px 0;}
+  .top-nav a{font-size:.85em;font-weight:300;color:var(--steel);letter-spacing:.15em;}
+  .top-nav a:hover{color:var(--ink);}
+  .chapter-page{max-width:680px;margin:0 auto;padding:50px 40px 80px;}
+  .chapter-meta{text-align:center;margin-bottom:70px;}
+  .part-label{font-size:.85em;font-weight:300;letter-spacing:.35em;color:var(--blue);margin-bottom:24px;}
+  .chapter-title{font-size:2em;font-weight:600;color:var(--ink);letter-spacing:.12em;margin-bottom:10px;}
+  .chapter-deco{width:40px;height:1px;background:var(--line);margin:30px auto 0;}
+  .content{font-size:1.05em;line-height:2.1;color:var(--accent);letter-spacing:.02em;}
+  .content p{margin-bottom:1.4em;text-indent:2em;}
+  .content .nx{text-indent:0;}
+  .content .engineer{color:var(--ink);font-weight:400;}
+  .content blockquote{border-left:2px solid var(--blue);margin:2em 0;padding:.4em 0 .4em 1.4em;color:var(--accent);font-weight:300;}
+  .content blockquote p{text-indent:0;margin-bottom:.6em;}
+  .break{text-align:center;color:var(--blue);letter-spacing:1em;margin:2.5em 0 2em;font-size:.9em;}
+  .bottom-nav{max-width:680px;margin:0 auto;padding:40px 40px 80px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;}
+  .bottom-nav a{font-size:.9em;font-weight:300;color:var(--steel);letter-spacing:.05em;line-height:1.8;}
+  .bottom-nav a:hover{color:var(--ink);}
+  .bottom-nav .label{display:block;font-size:.7em;color:var(--blue);letter-spacing:.25em;margin-bottom:6px;}
+  .bottom-nav .right{text-align:right;}
+  @media(max-width:600px){.chapter-page{padding:30px 24px 60px;}.chapter-title{font-size:1.5em;}.content{font-size:1em;line-height:1.95;}.bottom-nav{padding:30px 24px 60px;}}
+</style>
+</head>
+<body>
+<div class="top-nav"><a href="商业施工图_目录.html">← 返回目录</a></div>
+
+<div class="chapter-page">
+  <div class="chapter-meta">
+    <div class="part-label">第一部 · 总图</div>
+    <div class="chapter-title">从山顶倒推到山脚</div>
+    <div class="chapter-deco"></div>
+  </div>
+
+  <div class="content">
+    <p>十五件事定下来之后，下一个问题来了——</p>
+
+    <p>每一件事，从今天到完成，中间要发生什么？</p>
+
+    <p>我那时候以为，定下来就等于做完。</p>
+
+    <p>后来发现，定下来跟做完之间，隔着一座山。</p>
+
+    <div class="break">· · ·</div>
+
+    <p>我们公司今年第一件事，是"客户挽留体系"。</p>
+
+    <p>这件事在那张坐标图上，是右上角。</p>
+
+    <p>三年价值高——客户挽留好了，复购率上去，公司命运改变。</p>
+
+    <p>今天压力大——上一年客户流失了不少，再不做就完了。</p>
+
+    <p>立项的时候大家很激动。CEO 亲自抓。客服 VP 牵头。预算批了。会议开了。PPT 做了三版。</p>
+
+    <p>然后呢？</p>
+
+    <p>然后两个月过去，这件事没动。</p>
+
+    <p>我那时候着急。我把客服 VP 叫过来，问她："你那一摊到底怎么样了？"</p>
+
+    <p>她说："吴总，我们在做。"</p>
+
+    <p>我说："具体做到哪一步了？"</p>
+
+    <p>她想了想，说："我们最近开了三次会，对齐了挽留体系的框架。"</p>
+
+    <p>我说："然后呢？"</p>
+
+    <p>她说："然后我们在等产品部那边把数据看板做完，我们才能开始打电话。"</p>
+
+    <p>我说："产品部那边什么时候做完？"</p>
+
+    <p>她说："他们说要三周。"</p>
+
+    <p>我说："三周之后开始打电话——打给谁？"</p>
+
+    <p>她愣住了。</p>
+
+    <p>她说："打给——流失客户。"</p>
+
+    <p>我说："具体的流失客户名单，从哪里来？"</p>
+
+    <p>她说："这要等数据团队跑一遍。"</p>
+
+    <p>我说："数据团队什么时候能跑完？"</p>
+
+    <p>她想了想，说："这个我不太清楚。"</p>
+
+    <div class="break">· · ·</div>
+
+    <p>那一天的对话我后来想了很久。</p>
+
+    <p>不是客服 VP 不努力。她非常努力。</p>
+
+    <p>是这件事——从开始到完成——中间的链条没人捋过。</p>
+
+    <p>一件大事，要落地，中间要发生十八件事。</p>
+
+    <p>第一件不发生，第二件就动不了。 第五件没人对接，第六件就停在那。 第十件做错了，前面九件全部要返工。</p>
+
+    <p>我们立项的时候只画了"开始"和"结果"。</p>
+
+    <p>中间没画。</p>
+
+    <p>中间的十八件，是这件事真正"做不做得成"的关键。</p>
+
+    <div class="break">· · ·</div>
+
+    <p>那一晚我做了一件事。</p>
+
+    <p>我把"客户挽留体系"四个字写在白板顶端。</p>
+
+    <p>我在它下面画了一条横线。</p>
+
+    <p>横线右端，写："半年后——挽留率从 18% 提到 35%。"</p>
+
+    <p>横线左端，写："今天——9 月 12 日。"</p>
+
+    <p>中间，是一片空白。</p>
+
+    <p>我开始倒推。</p>
+
+    <p>倒推第一步—— 要实现"挽留率 35%"，半年后我需要什么？</p>
+
+    <p>我需要：一个 50 人的挽留团队（含客服、销售、客户成功），有客户分级、有挽留话术、有挽留权限（折扣、续约优惠、补偿额度）、有挽留数据看板、有月度复盘机制。</p>
+
+    <p>倒推第二步—— 半年的最后一个月，这五件事的最终状态是什么？</p>
+
+    <p>我写： - 第六个月：稳定运营、月度复盘机制运行一次。 - 第五个月：所有挽留人员上岗、看板每天看一次。 - 第四个月：第一批挽留人员入职、话术和权限规则定稿。 - 第三个月：开始招聘、看板上线、话术 V1 完成、权限规则上报董事会。 - 第二个月：客户分级模型完成、话术 V0 完成、权限规则草案。 - 第一个月：数据团队拉出全量客户数据、确定分级维度、确定 V0 话术目标。</p>
+
+    <p>倒推第三步—— 第一个月里，每一周分别要发生什么？</p>
+
+    <p>第一周：明确数据维度、确认分级目标、组建挽留筹备小组（5 人）。 第二周：数据团队拉出第一版客户数据、初步分级模型。 第三周：分级模型 V1、话术 V0 起草。 第四周：分级模型 V1 内部评审、话术 V0 内部测试。</p>
+
+    <p>倒推第四步—— 第一周里，每一天要发生什么？</p>
+
+    <p>周一：召集筹备小组（客服 VP、数据负责人、销售老郑、产品老王、我）。 周二：明确"挽留"的定义。明确"流失"的定义。明确"分级"的维度。 周三：数据团队列清单——目前的数据缺口。 周四：每个人各自回去补一份"上一年我们碰到的最难挽留的 5 个客户"案例。 周五：第二次会议，整合案例 + 数据 + 维度，输出"分级模型 V0"。</p>
+
+    <p>倒推第五步—— 周一这次会议，会议前要准备什么？</p>
+
+    <p>我自己准备：开场白、目标说明、我对这件事的判断标准。 客服 VP 准备：客服部对"流失"的当前定义、过去一年实际数据。 数据负责人准备：当前我们对客户的所有数据维度清单。 销售老郑准备：销售视角下"高价值客户"的定义。 产品老王准备：产品视角下"高活跃客户"的定义。 我自己定一个会议时间——周一上午九点到十一点。地点——三楼小会议室。提前两天发会议邀请。</p>
+
+    <div class="break">· · ·</div>
+
+    <p>我倒推到这一步的时候，那块白板已经写满了。</p>
+
+    <p>我盯着这块白板看了很久。</p>
+
+    <p>我心里那个工程师说话了。</p>
+
+    <blockquote>
+      <p>这就是施工图。</p>
+      <p></p>
+      <p>你以为施工图就是"做"。</p>
+      <p></p>
+      <p>不是。</p>
+      <p></p>
+      <p>施工图是——把"半年后那栋楼"，倒推回"今天早上九点谁带一支什么样的笔来开会"。</p>
+      <p></p>
+      <p>中间的每一层，都要被画出来。</p>
+      <p></p>
+      <p>不画——你这件事就是空中楼阁。</p>
+      <p></p>
+      <p>画了——你这件事就能落地。</p>
+    </blockquote>
+
+    <div class="break">· · ·</div>
+
+    <p>那一晚我心里翻江倒海。</p>
+
+    <p>我做了二十六年企业。</p>
+
+    <p>我从来没认真做过"从山顶倒推到山脚"这件事。</p>
+
+    <p>我做的所有计划，都是"从山脚往山顶看"。</p>
+
+    <p>从山脚往山顶看——你看到的是希望。 从山顶往山脚倒推——你看到的是路径。</p>
+
+    <p>希望让人激动。</p>
+
+    <p>路径让人能走。</p>
+
+    <p>我过去二十一年，给自己和团队的，全是希望。</p>
+
+    <p>我没给过他们路径。</p>
+
+    <p>我以为路径他们自己会找。</p>
+
+    <p>后来才知道——没有路径，团队就在山脚下绕圈。</p>
+
+    <p>绕圈不是因为他们方向感差。</p>
+
+    <p>是因为没人告诉他们——这座山的山顶在哪、上山的路怎么走、第一段先到哪个营地。</p>
+
+    <div class="break">· · ·</div>
+
+    <p>倒推这件事，看起来简单。</p>
+
+    <p>做起来——很难。</p>
+
+    <p>难在哪？</p>
+
+    <p>难在你必须从"结果"倒着想。</p>
+
+    <p>我们大部分人的脑子，习惯"从原因到结果"。</p>
+
+    <p>从结果倒着想，需要刻意训练。</p>
+
+    <p>我自己倒推过几次之后，总结了一个方法。</p>
+
+    <p>我把它叫做——"五层倒推法"。</p>
+
+    <p>第一层：三年后的样子。 第二层：一年后的状态。 第三层：三个月后的关键节点。 第四层：一个月后的具体进度。 第五层：这一周每一天的动作。</p>
+
+    <p>每一层之间，要"咬合"。</p>
+
+    <p>什么叫咬合？</p>
+
+    <p>就是上一层的"目标"，等于下一层的"前提"。</p>
+
+    <p>举个例子——</p>
+
+    <p>三年后："挽留率 50%"。 一年后："挽留率 35%、挽留体系运行稳定、年度复盘机制成熟"。 三个月后："第一批挽留人员入职、看板上线、话术 V1 完成"。 一个月后："分级模型完成、话术 V0 完成、权限规则草案"。 这一周："拉数据、定维度、组建筹备小组"。</p>
+
+    <p>每一层下来，下一层是上一层的"必经路径"。</p>
+
+    <p>没有"分级模型"，话术做不出来。 没有话术，挽留人员上岗了也不知道怎么打电话。 没有挽留人员，三个月后启动不了。 没有三个月启动，一年后达不到 35%。 达不到 35%，三年后到不了 50%。</p>
+
+    <p>每一层，都是上一层的"地基"。</p>
+
+    <p>地基不打——上面盖再漂亮，全部是空中楼阁。</p>
+
+    <div class="break">· · ·</div>
+
+    <p>倒推之外，还有一件特别重要的事——</p>
+
+    <p>倒推的时候，要"诚实"。</p>
+
+    <p>什么叫诚实？</p>
+
+    <p>就是——这一层做完，下一层真的能开始吗？</p>
+
+    <p>我后来发现，大部分公司倒推不下去的原因——不是不会倒推，是不诚实。</p>
+
+    <p>比如—— "三个月后挽留人员入职"——你倒推回去，三个月内你要招 50 人。你公司 HR 现在的招聘速度是一个月 10 人，那么三个月你只能招 30 人。 不诚实的人会写："三个月招 50 人，加大招聘力度。" 诚实的人会写："三个月招 30 人。要么把目标降下来，要么把招聘外包。"</p>
+
+    <p>不诚实的倒推，最后变成空中楼阁。</p>
+
+    <p>诚实的倒推，会逼着你提前发现"做不到"。</p>
+
+    <p>提前发现"做不到"——是好事。</p>
+
+    <p>它让你今天就调整，而不是六个月后再翻车。</p>
+
+    <div class="break">· · ·</div>
+
+    <p>我现在公司有一条规矩——</p>
+
+    <p>任何"季度大事"，立项的时候必须做一次"从山顶倒推到山脚"的五层拆解。</p>
+
+    <p>拆解出来之后，必须有"三个真问题"——</p>
+
+    <p>第一个真问题：哪一层最难？ 第二个真问题：哪一层最容易被忽略？ 第三个真问题：哪一层做错了，全盘要返工？</p>
+
+    <p>回答完这三个真问题，才算"立项完成"。</p>
+
+    <p>回答不出——回去重做。</p>
+
+    <p>这条规矩，让我们公司过去一年立的项目，没有一个烂尾。</p>
+
+    <div class="break">· · ·</div>
+
+    <p>这一章的核心是——</p>
+
+    <p>会"从山脚往山顶看"的人，是有梦想的人。 会"从山顶往山脚倒推"的人，是能做成事的人。</p>
+
+    <p>两个能力，缺一不可。</p>
+
+    <p>只有前者，是诗人。 只有后者，是工头。 两者都有，是能盖楼的人。</p>
+
+    <div class="break">· · ·</div>
+
+    <p>最后给一个具体动作——</p>
+
+    <p>你今年最重要的那一件事，写下来。</p>
+
+    <p>然后用一个下午，做一次"五层倒推"。</p>
+
+    <p>倒推到"这一周每一天的动作"。</p>
+
+    <p>倒推完，给自己留十分钟，问"三个真问题"。</p>
+
+    <p>回答不出来——这件事还没真正"立项"。</p>
+
+    <p>回答得出——你这件事，今年大概率能做成。</p>
+
+    <p>倒推这件事，看上去很慢。</p>
+
+    <p>实际上——</p>
+
+    <p>它能让你接下来的半年，少绕九十次弯路。</p>
+
+    <p>下一章，我们讲一个更尖锐的概念——</p>
+
+    <p>倒推完了，你会发现很多路同时可以走。</p>
+
+    <p>但是真正能让你到达山顶的，只有一条。</p>
+
+    <p>那一条叫——关键路径。</p>
+  </div>
+</div>
+
+<div class="bottom-nav">
+  <a href="06_五_三年太远明天太近.html">
+    <span class="label">上一章</span>五　三年太远，明天太近
+  </a>
+  <a href="08_七_关键路径.html" class="right">
+    <span class="label">下一章</span>七　关键路径
+  </a>
+</div>
+</body>
+</html>

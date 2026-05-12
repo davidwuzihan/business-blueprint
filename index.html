@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>商业施工图 · 目录</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@300;400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap');
+
+  :root {
+    --ink: #1a1a1a;
+    --paper: #f2f1ed;
+    --steel: #6b6e73;
+    --accent: #2c2c2c;
+    --line: #d2d0cb;
+    --dim: #c4c1ba;
+    --blue: #4a5568;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Noto Serif SC', serif;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .book {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 80px 40px 120px;
+  }
+
+  /* ---- Cover ---- */
+  .cover {
+    text-align: center;
+    padding: 100px 0 80px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 60px;
+  }
+
+  .cover h1 {
+    font-size: 2.8em;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    margin-bottom: 16px;
+    color: var(--ink);
+  }
+
+  .cover .subtitle {
+    font-size: 1.05em;
+    font-weight: 300;
+    color: var(--steel);
+    letter-spacing: 0.08em;
+    margin-bottom: 40px;
+  }
+
+  .cover .author {
+    font-size: 0.95em;
+    font-weight: 400;
+    color: var(--blue);
+    letter-spacing: 0.2em;
+  }
+
+  /* ---- Flap ---- */
+  .flap {
+    text-align: center;
+    padding: 50px 60px;
+    margin-bottom: 60px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .flap p {
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 2;
+    color: var(--accent);
+    letter-spacing: 0.05em;
+  }
+
+  /* ---- TOC Title ---- */
+  .toc-title {
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 300;
+    letter-spacing: 0.3em;
+    color: var(--steel);
+    margin-bottom: 60px;
+  }
+
+  /* ---- Standalone ---- */
+  .standalone {
+    padding: 20px 0;
+    margin-bottom: 8px;
+  }
+
+  .standalone .label {
+    font-size: 1.05em;
+    font-weight: 400;
+    color: var(--ink);
+    letter-spacing: 0.05em;
+  }
+
+  .standalone .sep {
+    display: inline-block;
+    width: 20px;
+    height: 1px;
+    background: var(--line);
+    vertical-align: middle;
+    margin: 0 12px;
+  }
+
+  .standalone .title {
+    font-size: 1.05em;
+    font-weight: 300;
+    color: var(--steel);
+  }
+
+  /* ---- Part ---- */
+  .part {
+    margin-top: 50px;
+    margin-bottom: 12px;
+    padding-bottom: 40px;
+  }
+
+  .part-header {
+    margin-bottom: 8px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .part-top {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 6px;
+  }
+
+  .part-label {
+    font-size: 0.8em;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    color: var(--blue);
+    white-space: nowrap;
+  }
+
+  .part-name {
+    font-size: 1.4em;
+    font-weight: 600;
+    color: var(--ink);
+    letter-spacing: 0.1em;
+  }
+
+  .part-sub {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 0.8em;
+    font-weight: 300;
+    color: var(--steel);
+    letter-spacing: 0.06em;
+    margin-top: 4px;
+  }
+
+  /* ---- Chapter ---- */
+  .chapter {
+    display: flex;
+    align-items: baseline;
+    padding: 9px 0 9px 0;
+    position: relative;
+  }
+
+  .chapter-num {
+    font-family: 'Noto Sans SC', sans-serif;
+    font-size: 0.75em;
+    font-weight: 300;
+    color: var(--blue);
+    min-width: 56px;
+    letter-spacing: 0.05em;
+  }
+
+  .chapter-title {
+    font-size: 1em;
+    font-weight: 400;
+    color: var(--accent);
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+  }
+
+  .chapter:hover .chapter-title {
+    color: var(--ink);
+  }
+
+  .chapter:hover .chapter-num {
+    color: var(--steel);
+  }
+
+  /* ---- Final ---- */
+  .final {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+  }
+
+  /* ---- Back Matter ---- */
+  .back-matter {
+    margin-top: 80px;
+    padding-top: 50px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+  }
+
+  .back-quote {
+    font-size: 1.05em;
+    font-weight: 300;
+    line-height: 2.2;
+    color: var(--accent);
+    letter-spacing: 0.04em;
+    margin-bottom: 40px;
+  }
+
+  .back-quote em {
+    font-style: normal;
+    font-weight: 400;
+    color: var(--ink);
+  }
+
+  .back-label {
+    font-size: 0.8em;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    color: var(--blue);
+    margin-bottom: 16px;
+  }
+
+  .back-bio {
+    font-size: 0.9em;
+    font-weight: 300;
+    color: var(--steel);
+    line-height: 2;
+    letter-spacing: 0.03em;
+  }
+
+  .divider {
+    width: 40px;
+    height: 1px;
+    background: var(--line);
+    margin: 30px auto;
+  }
+
+  @media (max-width: 600px) {
+    .book { padding: 50px 24px 80px; }
+    .cover { padding: 60px 0 50px; }
+    .cover h1 { font-size: 2em; }
+    .flap { padding: 30px 20px; }
+    .flap p { font-size: 1em; }
+    .part-name { font-size: 1.2em; }
+  }
+</style>
+</head>
+<body>
+<div class="book">
+
+  <!-- Cover -->
+  <div class="cover">
+    <h1>商业施工图</h1>
+    <div class="subtitle">当建筑师拿起计算器</div>
+    <div class="author">吴 子 寒 &nbsp; 著</div>
+  </div>
+
+  <!-- Flap -->
+  <div class="flap">
+    <p>
+      让所有人想走进去，是效果图的事。<br>
+      让那栋楼真的站起来，是施工图的事。<br><br>
+      梦想不落地，就是最昂贵的烂尾。
+    </p>
+  </div>
+
+  <!-- TOC -->
+  <div class="toc-title">目 &nbsp; 录</div>
+
+  <!-- 序 -->
+  <div class="standalone">
+    <span class="label">序</span>
+    <span class="sep"></span>
+    <span class="title">那栋楼还没有盖起来</span>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- 第零部 -->
+  <div class="part">
+    <div class="part-header">
+      <div class="part-top">
+        <span class="part-label">第零部</span>
+        <span class="part-name">从图纸到工地</span>
+      </div>
+    </div>
+    <div class="chapter"><span class="chapter-num">一</span><span class="chapter-title">美丽的烂尾</span></div>
+    <div class="chapter"><span class="chapter-num">二</span><span class="chapter-title">两种建筑师</span></div>
+    <div class="chapter"><span class="chapter-num">三</span><span class="chapter-title">工程师</span></div>
+  </div>
+
+  <!-- 第一部 -->
+  <div class="part">
+    <div class="part-header">
+      <div class="part-top">
+        <span class="part-label">第一部</span>
+        <span class="part-name">总图</span>
+      </div>
+      <div class="part-sub">战略拆解 — 从愿景到三年到一年到季度到月</div>
+    </div>
+    <div class="chapter"><span class="chapter-num">四</span><span class="chapter-title">你的愿景能拆成几块</span></div>
+    <div class="chapter"><span class="chapter-num">五</span><span class="chapter-title">三年太远，明天太近</span></div>
+    <div class="chapter"><span class="chapter-num">六</span><span class="chapter-title">从山顶倒推到山脚</span></div>
+    <div class="chapter"><span class="chapter-num">七</span><span class="chapter-title">关键路径</span></div>
+    <div class="chapter"><span class="chapter-num">八</span><span class="chapter-title">优先级不是排序，是放弃</span></div>
+    <div class="chapter"><span class="chapter-num">九</span><span class="chapter-title">里程碑</span></div>
+    <div class="chapter"><span class="chapter-num">十</span><span class="chapter-title">活计划，死计划</span></div>
+    <div class="chapter"><span class="chapter-num">十一</span><span class="chapter-title">第一次对着施工图点头</span></div>
+  </div>
+
+  <!-- 第二部 -->
+  <div class="part">
+    <div class="part-header">
+      <div class="part-top">
+        <span class="part-label">第二部</span>
+        <span class="part-name">结构图</span>
+      </div>
+      <div class="part-sub">组织设计 — 谁扛梁，谁承重，怎么分工，怎么配合</div>
+    </div>
+    <div class="chapter"><span class="chapter-num">十二</span><span class="chapter-title">谁是梁，谁是柱</span></div>
+    <div class="chapter"><span class="chapter-num">十三</span><span class="chapter-title">你的组织能承受多少重量</span></div>
+    <div class="chapter"><span class="chapter-num">十四</span><span class="chapter-title">一根梁扛不了整栋楼</span></div>
+    <div class="chapter"><span class="chapter-num">十五</span><span class="chapter-title">不是缺人，是位置放错了</span></div>
+    <div class="chapter"><span class="chapter-num">十六</span><span class="chapter-title">架构跟着战略走，不是反过来</span></div>
+    <div class="chapter"><span class="chapter-num">十七</span><span class="chapter-title">拆掉那面不承重的墙</span></div>
+    <div class="chapter"><span class="chapter-num">十八</span><span class="chapter-title">最小作战单元</span></div>
+    <div class="chapter"><span class="chapter-num">十九</span><span class="chapter-title">结构对了，力自己会传导</span></div>
+  </div>
+
+  <!-- 第三部 -->
+  <div class="part">
+    <div class="part-header">
+      <div class="part-top">
+        <span class="part-label">第三部</span>
+        <span class="part-name">水电图</span>
+      </div>
+      <div class="part-sub">业务流程与现金流 — 钱怎么流，活怎么流，信息怎么流</div>
+    </div>
+    <div class="chapter"><span class="chapter-num">二十</span><span class="chapter-title">看不见的才是命</span></div>
+    <div class="chapter"><span class="chapter-num">二十一</span><span class="chapter-title">你的钱是怎么流的</span></div>
+    <div class="chapter"><span class="chapter-num">二十二</span><span class="chapter-title">你的活是怎么流的</span></div>
+    <div class="chapter"><span class="chapter-num">二十三</span><span class="chapter-title">堵了</span></div>
+    <div class="chapter"><span class="chapter-num">二十四</span><span class="chapter-title">漏了</span></div>
+    <div class="chapter"><span class="chapter-num">二十五</span><span class="chapter-title">信息流：最容易被忽视的第三根管</span></div>
+    <div class="chapter"><span class="chapter-num">二十六</span><span class="chapter-title">现金流是氧气</span></div>
+    <div class="chapter"><span class="chapter-num">二十七</span><span class="chapter-title">通了</span></div>
+  </div>
+
+  <!-- 第四部 -->
+  <div class="part">
+    <div class="part-header">
+      <div class="part-top">
+        <span class="part-label">第四部</span>
+        <span class="part-name">装修图</span>
+      </div>
+      <div class="part-sub">产品与客户交付 — 每一个触点长什么样，做到什么标准</div>
+    </div>
+    <div class="chapter"><span class="chapter-num">二十八</span><span class="chapter-title">客户不住在效果图里</span></div>
+    <div class="chapter"><span class="chapter-num">二十九</span><span class="chapter-title">最小可交付</span></div>
+    <div class="chapter"><span class="chapter-num">三十</span><span class="chapter-title">每一面墙的手感</span></div>
+    <div class="chapter"><span class="chapter-num">三十一</span><span class="chapter-title">标准化与个性化</span></div>
+    <div class="chapter"><span class="chapter-num">三十二</span><span class="chapter-title">交付即兑现</span></div>
+    <div class="chapter"><span class="chapter-num">三十三</span><span class="chapter-title">客户验收的那一刻</span></div>
+    <div class="chapter"><span class="chapter-num">三十四</span><span class="chapter-title">返工</span></div>
+    <div class="chapter"><span class="chapter-num">三十五</span><span class="chapter-title">住进去之后</span></div>
+  </div>
+
+  <!-- 第五部 -->
+  <div class="part">
+    <div class="part-header">
+      <div class="part-top">
+        <span class="part-label">第五部</span>
+        <span class="part-name">消防图</span>
+      </div>
+      <div class="part-sub">风险与纪律 — 什么时候踩刹车，什么是底线，怎么活下来</div>
+    </div>
+    <div class="chapter"><span class="chapter-num">三十六</span><span class="chapter-title">你的楼会着火吗</span></div>
+    <div class="chapter"><span class="chapter-num">三十七</span><span class="chapter-title">最不想发生的三件事</span></div>
+    <div class="chapter"><span class="chapter-num">三十八</span><span class="chapter-title">信号灯</span></div>
+    <div class="chapter"><span class="chapter-num">三十九</span><span class="chapter-title">刹车比油门重要</span></div>
+    <div class="chapter"><span class="chapter-num">四十</span><span class="chapter-title">底线不是用来讨论的</span></div>
+    <div class="chapter"><span class="chapter-num">四十一</span><span class="chapter-title">预案</span></div>
+    <div class="chapter"><span class="chapter-num">四十二</span><span class="chapter-title">活下来的纪律</span></div>
+    <div class="chapter"><span class="chapter-num">四十三</span><span class="chapter-title">最坏的情况发生之后</span></div>
+  </div>
+
+  <!-- 终章 -->
+  <div class="final">
+    <div class="standalone">
+      <span class="label">终章</span>
+      <span class="sep"></span>
+      <span class="title">一栋真实的楼</span>
+    </div>
+  </div>
+
+  <!-- 后记 -->
+  <div class="standalone" style="margin-top: 24px;">
+    <span class="label">后记</span>
+    <span class="sep"></span>
+    <span class="title">三张图纸</span>
+  </div>
+
+  <!-- Back Matter -->
+  <div class="back-matter">
+    <div class="back-label">封 底</div>
+    <div class="back-quote">
+      效果图让所有人想走进去。<br>
+      施工图让那栋楼真的站起来。<br><br>
+      <em>心负责造梦。脑负责造楼。</em><br>
+      <em>缺哪一个，都只是烂尾。</em>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="back-label">后 折 口</div>
+    <div class="back-bio">
+      吴子寒。著有《身·脑·心》《商业效果图》。<br><br>
+      他相信：梦想不落地，就是最昂贵的烂尾。
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
